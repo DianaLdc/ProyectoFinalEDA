@@ -1,14 +1,33 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulador de Árbol AVL</title>
+  <title>Árbol Binario</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Bienvenida al Simulador de Árbol AVL</h1>
-  <script src="script.js"></script>
+  <header>
+    <h1>Visualizador de Árbol Binario</h1>
+    <nav>
+      <button onclick="location.href='index.html'">Árbol Binario</button>
+      <button onclick="location.href='avl.html'">AVL</button>
+      <button onclick="location.href='splayTree.html'">Splay Tree</button>
+      <button onclick="location.href='bTree.html'">B Tree</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input type="number" id="inputValue" placeholder="Valor a insertar" />
+      <button onclick="insertNode()">Insertar</button>
+      <button onclick="deleteNode()">Eliminar</button>
+      <button onclick="clearTree()">Limpiar</button>
+    </div>
+
+    <canvas id="treeCanvas" width="1200" height="600"></canvas>
+  </main>
+
+  <script src="binaryTree.js"></script>
 </body>
 </html>

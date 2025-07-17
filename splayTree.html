@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizador de Árbol Splay</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Visualizador de Árbol Splay</h1>
+    <select onchange="cambiarArbol(this.value)">
+      <option value="index.html">Binario</option>
+      <option value="avl.html">AVL</option>
+      <option value="splay.html" selected>Splay</option>
+      <option value="btree.html">B</option>
+    </select>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input type="text" id="valor" placeholder="Valor" />
+      <button onclick="insertar()">Insertar</button>
+      <button onclick="eliminar()">Eliminar</button>
+      <button onclick="limpiar()">Limpiar</button>
+    </div>
+    <canvas id="canvas" width="1200" height="600"></canvas>
+  </main>
+
+  <script>
+    function cambiarArbol(archivo) {
+      window.location.href = archivo;
+    }
+  </script>
+  <script src="splayTree.js" defer></script>
+</body>
+</html>
