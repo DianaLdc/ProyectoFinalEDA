@@ -2,36 +2,31 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Visualizador de Árbol AVL</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Árbol AVL</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Visualizador de Árbol AVL</h1>
-    <select onchange="cambiarArbol(this.value)">
-      <option value="index.html">Binario</option>
-      <option value="avl.html" selected>AVL</option>
-      <option value="splay.html">Splay</option>
-      <option value="btree.html">B</option>
-    </select>
+    <h1>Visualizador de AVL</h1>
+    <nav>
+      <button onclick="location.href='index.html'">Árbol Binario</button>
+      <button onclick="location.href='splayTree.html'">Splay Tree</button>
+      <button onclick="location.href='bTree.html'">B Tree</button>
+    </nav>
   </header>
 
   <main>
     <div class="controls">
-      <input type="text" id="valor" placeholder="Valor" />
-      <button onclick="insertar()">Insertar</button>
-      <button onclick="eliminar()">Eliminar</button>
-      <button onclick="limpiar()">Limpiar</button>
+      <input type="number" id="inputValue" placeholder="Valor a insertar" />
+      <button onclick="insertNode()">Insertar</button>
+      <button onclick="deleteNode()">Eliminar</button>
+      <button onclick="clearTree()">Limpiar</button>
     </div>
-    <canvas id="canvas" width="1200" height="600"></canvas>
+
+    <canvas id="treeCanvas" width="1200" height="600"></canvas>
   </main>
 
-  <script>
-    function cambiarArbol(archivo) {
-      window.location.href = archivo;
-    }
-  </script>
-  <script src="avlTree.js" defer></script>
+  <script src="avlTree.js"></script>
 </body>
 </html>
